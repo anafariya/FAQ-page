@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | FAQ Accordion Card</title>
+    <link rel="stylesheet" href="style.css" />
+
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        font-family: Kumbh Sans;
+      }
+
+      html,
+      body {
+        height: 100%;
+        width: 100%;
+      }
+
+      #purple-part {
+        background-color: hsl(240, 73%, 65%);
+        height: 100vh;
+        width: 100vw;
+        position: relative;
+      }
+
+      #main {
+        background-color: white;
+        height: 80%;
+        width: 80%;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 30px;
+        left: 10%;
+        top: 10%;
+      }
+
+      #womanpic {
+        position: absolute;
+        left: -5%;
+      }
+
+      #quesans {
+        position: absolute;
+        left: 45%;
+      }
+
+      #heading {
+        margin: 0;
+      }
+
+      .answer {
+        width: 100%;
+        margin: 5px;
+        display: none;
+      }
+
+      .answer h5 {
+        font-weight: 450;
+      }
+
+      .question {
+        width: 100%;
+        margin: 5px;
+        margin-bottom: 15px;
+        margin-top: 15px;
+      }
+
+      .question h3 {
+        font-weight: 450;
+      }
+
+      .question h3:hover {
+        font-weight: 600;
+        cursor: pointer;
+      }
+
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <div id="purple-part">
+      <div id="main">
+        <div id="womanpic">
+          <img src="images/illustration-woman-online-desktop.svg" alt="">
+        </div>
+        <div id="quesans">
+          <div id="heading">
+            <h1>FAQ</h1>
+            <div class="question" onclick="toggleAnswer('answer1')">
+              <h3>How many team members can I invite? <img src="images/icon-arrow-down.svg" alt=""></h3>
+            </div>
+            <div class="answer" id="answer1">
+              <h5>
+                You can invite up to 2 additional users on the Free plan. There is
+                no limit on team members for the Premium plan.
+              </h5>
+            </div>
+            <div class="question" onclick="toggleAnswer('answer2')">
+              <h3>What is the maximum file upload size? <img src="images/icon-arrow-down.svg" alt=""></h3>
+            </div>
+            <div class="answer" id="answer2">
+              <h5>
+                No more than 2GB. All files in your account must fit your allotted
+                storage space.
+              </h5>
+            </div>
+            <div class="question" onclick="toggleAnswer('answer3')">
+              <h3>How do I reset my password? <img src="images/icon-arrow-down.svg" alt=""></h3>
+            </div>
+            <div class="answer" id="answer3">
+              <h5>
+                Click “Forgot password” from the login page or “Change password” from
+                your profile page. A reset link will be emailed to you.
+              </h5>
+            </div>
+            <div class="question" onclick="toggleAnswer('answer4')">
+              <h3>Can I cancel my subscription? <img src="images/icon-arrow-down.svg" alt=""></h3>
+            </div>
+            <div class="answer" id="answer4">
+              <h5>
+                Yes! Send us a message and we'll process your request no questions
+                asked.
+              </h5>
+            </div>
+            <div class="question" onclick="toggleAnswer('answer5')">
+              <h3>Do you provide additional support? <img src="images/icon-arrow-down.svg" alt=""></h3>
+            </div>
+            <div class="answer" id="answer5">
+              <h5>
+                Chat and email support is available 24/7. Phone lines are open during
+                normal business hours.
+              </h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Ana Fariya</a>.
+    </div>
+
+    <script>
+      function toggleAnswer(answerId) {
+        var answer = document.getElementById(answerId);
+        if (answer.style.display === 'block') {
+          answer.style.display = 'none';
+        } else {
+          answer.style.display = 'block';
+        }
+      }
+    </script>
+  </body>
+</html>
